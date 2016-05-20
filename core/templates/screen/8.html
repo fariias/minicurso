@@ -1,0 +1,292 @@
+{% extends 'screen/base.html' %}
+
+{% block screens %}
+
+    <table id="tbVideo" border="0" width="100%" height="100%" cellspacing="0" cellpadding="0" style="text-align:center;table-layout: fixed;">
+        <tr>
+
+            <td colspan="3"  style="background-color:black">
+            <div id="c1Text" class="c8Text"></div>
+                <video id="video1" autoplay reload class="video1"  height="100%" width="100%">
+                    Camera 1
+                    <ul id="links1">
+                        {% for l in links1 %}
+                            <li>{{ l }}</li>
+                        {% endfor %}
+
+                    </ul>
+                    <source src=" " type="video/mp4">
+                </video>
+            </td>
+
+
+            <td colspan="3"  style="background-color:black">
+            <div id="c2Text" class="c8Text"></div>
+                <video id="video2" autoplay reload class="video2"  height="100%" width="100%">
+                    Camera 1
+                    <ul id="links2">
+                        {% for l in links2 %}
+                            <li>{{ l }}</li>
+                        {% endfor %}
+
+                    </ul>
+                    <source src=" " type="video/mp4">
+                </video>
+            </td>
+            <td colspan="3"  style="background-color:black">
+            <div id="c3Text" class="c8Text"></div>
+                <video id="video3" autoplay reload class="video3"  height="100%" width="100%">
+                    Camera 1
+                    <ul id="links3">
+                        {% for l in links3 %}
+                            <li>{{ l }}</li>
+                        {% endfor %}
+
+                    </ul>
+                    <source src=" " type="video/mp4">
+                </video>
+            </td>
+            <td colspan="3"  style="background-color:black">
+            <div id="c4Text" class="c8Text"></div>
+                <video id="video4" autoplay reload class="video4"  height="100%" width="100%">
+                    Camera 1
+                    <ul id="links4">
+                        {% for l in links4 %}
+                            <li>{{ l }}</li>
+                        {% endfor %}
+
+                    </ul>
+                    <source src=" " type="video/mp4">
+                </video>
+            </td>
+        </tr>
+        <tr>
+
+
+            <td colspan="3"  style="background-color:black">
+            <div id="c5Text" class="c8Text"></div>
+                <video id="video5" autoplay reload class="video5"  height="100%" width="100%">
+                    Camera 1
+                    <ul id="links5">
+                        {% for l in links5 %}
+                            <li>{{ l }}</li>
+                        {% endfor %}
+
+                    </ul>
+                    <source src=" " type="video/mp4">
+                </video>
+            </td>
+
+            <td colspan="3"  style="background-color:black">
+            <div id="c6Text" class="c8Text"></div>
+                <video id="video6" autoplay reload class="video6"  height="100%" width="100%">
+                    Camera 1
+                    <ul id="links6">
+                        {% for l in links6 %}
+                            <li>{{ l }}</li>
+                        {% endfor %}
+
+                    </ul>
+                    <source src=" " type="video/mp4">
+                </video>
+            </td>
+        <td colspan="3"  style="background-color:black">
+        <div id="c7Text" class="c8Text"></div>
+                <video id="video7" autoplay reload class="video7"  height="100%" width="100%">
+                    Camera 1
+                    <ul id="links7">
+                        {% for l in links7 %}
+                            <li>{{ l }}</li>
+                        {% endfor %}
+
+                    </ul>
+                    <source src=" " type="video/mp4">
+                </video>
+            </td>
+
+            <td colspan="3"  style="background-color:black">
+            <div id="c8Text" class="c8Text"></div>
+                <video id="video8" autoplay reload class="video8"  height="100%" width="100%">
+                    Camera 1
+                    <ul id="links8">
+                        {% for l in links8 %}
+                            <li>{{ l }}</li>
+                        {% endfor %}
+
+                    </ul>
+                    <source src=" " type="video/mp4">
+                </video>
+            </td>
+
+        </tr>
+    </table>
+
+    <script type='text/javascript'>
+
+        var links1 = [];
+        var links2 = [];
+        var links3 = [];
+        var links4 = [];
+        var links5 = [];
+        var links6 = [];
+        var links7 = [];
+        var links8 = [];
+
+        var l1 = 0;
+        var l2 = 0;
+        var l3 = 0;
+        var l4 = 0;
+        var l5 = 0;
+        var l6 = 0;
+        var l7 = 0;
+        var l8 = 0;
+
+
+
+        $(function () {
+            $("#links1 > li").each( function(index) {
+                links1.push($(this).html())
+            });
+            $("#links2 > li").each( function(index) {
+                links2.push($(this).html())
+            });
+            $("#links3 > li").each( function(index) {
+                links3.push($(this).html())
+            });
+            $("#links4 > li").each( function(index) {
+                links4.push($(this).html())
+            });
+            $("#links5 > li").each( function(index) {
+                links5.push($(this).html())
+            });
+            $("#links6 > li").each( function(index) {
+                links6.push($(this).html())
+            });
+            $("#links7 > li").each( function(index) {
+                links7.push($(this).html())
+            });
+            $("#links8 > li").each( function(index) {
+                links8.push($(this).html())
+            });
+
+
+            $('#video1 source').attr("src","http://189.80.11.182:8082/vr/record/{{ c1 }}/"+ $(date).val() +"/MP4/"+ links1[l1]);
+            $('#video1').load();
+
+            $('#video2 source').attr("src","http://189.80.11.182:8082/vr/record/{{ c2 }}/"+ $(date).val() +"/MP4/"+ links2[l2]);
+            $('#video2').load();
+
+            $('#video3 source').attr("src","http://189.80.11.182:8082/vr/record/{{ c3 }}/"+ $(date).val() +"/MP4/"+ links3[l3]);
+            $('#video3').load();
+
+            $('#video4 source').attr("src","http://189.80.11.182:8082/vr/record/{{ c4 }}/"+ $(date).val() +"/MP4/"+ links4[l4]);
+            $('#video4').load();
+
+            $('#video5 source').attr("src","http://189.80.11.182:8082/vr/record/{{ c5 }}/"+ $(date).val() +"/MP4/"+ links5[l5]);
+            $('#video5').load();
+
+            $('#video6 source').attr("src","http://189.80.11.182:8082/vr/record/{{ c6 }}/"+ $(date).val() +"/MP4/"+ links6[l6]);
+            $('#video6').load();
+
+            $('#video7 source').attr("src","http://189.80.11.182:8082/vr/record/{{ c7 }}/"+ $(date).val() +"/MP4/"+ links7[l7]);
+            $('#video7').load();
+
+            $('#video8 source').attr("src","http://189.80.11.182:8082/vr/record/{{ c8 }}/"+ $(date).val() +"/MP4/"+ links8[l8]);
+            $('#video8').load();
+
+            setLegenda();
+
+            document.getElementById('video1').addEventListener('ended', function(e) {
+                if(l1 < (links1.length -1)){
+                    l1 = l1+1;
+                }
+                $('#video1 source').attr("src","http://189.80.11.182:8082/vr/record/{{ c1 }}/"+ $(date).val() +"/MP4/"+ links1[l1]);
+                $('#video1').load();
+                setLegenda();
+            });
+
+            document.getElementById('video2').addEventListener('ended', function(e) {
+                if(l2 < (links2.length -1)){
+                    l2 = l2+1;
+                }
+                $('#video2 source').attr("src","http://189.80.11.182:8082/vr/record/{{ c2 }}/"+ $(date).val() +"/MP4/"+ links2[l2]);
+                $('#video2').load();
+                setLegenda();
+            });
+
+            document.getElementById('video3').addEventListener('ended', function(e) {
+                if(l3 < (links3.length -1)){
+                    l3 = l3+1;
+                }
+                $('#video3 source').attr("src","http://189.80.11.182:8082/vr/record/{{ c3 }}/"+ $(date).val() +"/MP4/"+ links3[l3]);
+                $('#video3').load();
+                setLegenda();
+            });
+
+            document.getElementById('video4').addEventListener('ended', function(e) {
+                if(l4 < (links4.length -1)){
+                    l4 = l4+1;
+                }
+                $('#video4 source').attr("src","http://189.80.11.182:8082/vr/record/{{ c4 }}/"+ $(date).val() +"/MP4/"+ links4[l4]);
+                $('#video4').load();
+                setLegenda();
+            });
+            document.getElementById('video5').addEventListener('ended', function(e) {
+                if(l5 < (links5.length -1)){
+                    l5 = l5+1;
+                }
+                $('#video5 source').attr("src","http://189.80.11.182:8082/vr/record/{{ c5 }}/"+ $(date).val() +"/MP4/"+ links5[l5]);
+                $('#video5').load();
+                setLegenda();
+            });
+            document.getElementById('video6').addEventListener('ended', function(e) {
+                if(l6 < (links6.length -1)){
+                    l6 = l6+1;
+                }
+                $('#video6 source').attr("src","http://189.80.11.182:8082/vr/record/{{ c6 }}/"+ $(date).val() +"/MP4/"+ links6[l6]);
+                $('#video6').load();
+                setLegenda();
+            });
+            document.getElementById('video7').addEventListener('ended', function(e) {
+                if(l7 < (links7.length -1)){
+                    l7 = l7+1;
+                }
+                $('#video7 source').attr("src","http://189.80.11.182:8082/vr/record/{{ c7 }}/"+ $(date).val() +"/MP4/"+ links7[l7]);
+                $('#video7').load();
+                setLegenda();
+            });
+            document.getElementById('video6').addEventListener('ended', function(e) {
+                if(l8 < (links8.length -1)){
+                    l8 = l8+1;
+                }
+                $('#video8 source').attr("src","http://189.80.11.182:8082/vr/record/{{ c8 }}/"+ $(date).val() +"/MP4/"+ links8[l8]);
+                $('#video8').load();
+                setLegenda();
+            });
+
+
+            function setLegenda() {
+                $('#c1Text').html('<b>' + $('#link1 option:selected').text().slice(3) + '</b>');
+                $('#c2Text').html('<b>' + $('#link2 option:selected').text().slice(3) + '</b>');
+                $('#c3Text').html('<b>' + $('#link3 option:selected').text().slice(3) + '</b>');
+                $('#c4Text').html('<b>' + $('#link4 option:selected').text().slice(3) + '</b>');
+                $('#c5Text').html('<b>' + $('#link5 option:selected').text().slice(3) + '</b>');
+                $('#c6Text').html('<b>' + $('#link6 option:selected').text().slice(3) + '</b>');
+                $('#c7Text').html('<b>' + $('#link7 option:selected').text().slice(3) + '</b>');
+                $('#c8Text').html('<b>' + $('#link8 option:selected').text().slice(3) + '</b>');
+
+                $('#c1Text').html($('#c1Text').html() + '<p><b style="text-align:center">' + $(date).val() + " " + links1[l1].slice(6, 8) + ":" + links1[l1].slice(8, 10) + '</b>');
+                $('#c2Text').html($('#c2Text').html() + '<p><b style="text-align:center">' + $(date).val() + " " + links2[l2].slice(6, 8) + ":" + links2[l2].slice(8, 10) + '</b>');
+                $('#c3Text').html($('#c3Text').html() + '<p><b style="text-align:center">' + $(date).val() + " " + links3[l3].slice(6, 8) + ":" + links3[l3].slice(8, 10) + '</b>');
+                $('#c4Text').html($('#c4Text').html() + '<p><b style="text-align:center">' + $(date).val() + " " + links4[l4].slice(6, 8) + ":" + links4[l4].slice(8, 10) + '</b>');
+                $('#c5Text').html($('#c5Text').html() + '<p><b style="text-align:center">' + $(date).val() + " " + links5[l5].slice(6, 8) + ":" + links5[l5].slice(8, 10) + '</b>');
+                $('#c6Text').html($('#c6Text').html() + '<p><b style="text-align:center">' + $(date).val() + " " + links6[l6].slice(6, 8) + ":" + links6[l6].slice(8, 10) + '</b>');
+                $('#c7Text').html($('#c7Text').html() + '<p><b style="text-align:center">' + $(date).val() + " " + links7[l7].slice(6, 8) + ":" + links7[l7].slice(8, 10) + '</b>');
+                $('#c8Text').html($('#c8Text').html() + '<p><b style="text-align:center">' + $(date).val() + " " + links8[l8].slice(6, 8) + ":" + links8[l8].slice(8, 10) + '</b>');
+
+
+            }
+
+        });
+    </script>
+{% endblock %}

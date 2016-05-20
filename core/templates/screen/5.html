@@ -1,0 +1,150 @@
+{% extends 'screen/base.html' %}
+
+{% block screens %}
+    <table id="tbVideo" border="5" width="100%" height="100%" cellspacing="0" cellpadding="0" style="text-align:center;">
+        <tr>
+
+            <td colspan="3" width="50%" height="50%" style="background-color:black">
+                <video id="video1" autoplay reload class="video1"  height="100%" style="padding:2px; margin-top: 4px;">
+                    Camera 1
+                    <ul id="links1">
+                        {% for l in links1 %}
+                            <li>{{ l }}</li>
+                        {% endfor %}
+
+                    </ul>
+                    <source src=" " type="video/mp4">
+                </video>
+            </td>
+
+
+            <td colspan="3" width="50%" height="50%" style="background-color:black">
+                <video id="video2" autoplay reload class="video2"  height="100%" style="padding:2px; margin-top: 4px;">
+                    Camera 1
+                    <ul id="links2">
+                        {% for l in links2 %}
+                            <li>{{ l }}</li>
+                        {% endfor %}
+
+                    </ul>
+                    <source src=" " type="video/mp4">
+                </video>
+            </td>
+        </tr>
+        <tr>
+
+            <td colspan="3" width="50%" height="50%" style="background-color:black">
+                <video id="video3" autoplay reload class="video3"  height="100%" style="padding:2px; margin-top: 4px;">
+                    Camera 1
+                    <ul id="links3">
+                        {% for l in links3 %}
+                            <li>{{ l }}</li>
+                        {% endfor %}
+
+                    </ul>
+                    <source src=" " type="video/mp4">
+                </video>
+            </td>
+
+            <td colspan="3" width="50%" height="50%" style="background-color:black">
+                <video id="video4" autoplay reload class="video4"  height="100%" style="padding:2px; margin-top: 4px;">
+                    Camera 1
+                    <ul id="links4">
+                        {% for l in links4 %}
+                            <li>{{ l }}</li>
+                        {% endfor %}
+
+                    </ul>
+                    <source src=" " type="video/mp4">
+                </video>
+            </td>
+
+        </tr>
+    </table>
+
+    <script type='text/javascript'>
+
+        var links1 = [];
+        var links2 = [];
+        var links3 = [];
+        var links4 = [];
+
+        var l1 = 5;
+        var l2 = 5;
+        var l3 = 5;
+        var l4 = 5;
+
+
+        $(function () {
+            $("#links1 > li").each( function(index) {
+                links1.push($(this).html())
+            });
+            $("#links2 > li").each( function(index) {
+                links2.push($(this).html())
+            });
+            $("#links3 > li").each( function(index) {
+                links3.push($(this).html())
+            });
+            $("#links4 > li").each( function(index) {
+                links4.push($(this).html())
+            });
+
+
+            $('#video1 source').attr("src","http://189.80.11.182:8082/vr/record/{{ c1 }}/"+ $(date).val() +"/MP4/"+ links1[l1]);
+            $('#video1').load();
+
+            $('#video2 source').attr("src","http://189.80.11.182:8082/vr/record/{{ c2 }}/"+ $(date).val() +"/MP4/"+ links2[l2]);
+            $('#video2').load();
+
+            $('#video3 source').attr("src","http://189.80.11.182:8082/vr/record/{{ c3 }}/"+ $(date).val() +"/MP4/"+ links3[l3]);
+            $('#video3').load();
+
+            $('#video4 source').attr("src","http://189.80.11.182:8082/vr/record/{{ c4 }}/"+ $(date).val() +"/MP4/"+ links4[l4]);
+            $('#video4').load();
+
+            document.getElementById('video1').addEventListener('ended', function(e) {
+                if(l1 < (links1.length -1)){
+                    l1 = l1+1;
+                }else{
+                    window.alert("A lista de videos da câmera 1 chegou ao fim!")
+                }
+                $('#video1 source').attr("src","http://189.80.11.182:8082/vr/record/{{ c1 }}/"+ $(date).val() +"/MP4/"+ links1[l1]);
+                $('#video1').load();
+            });
+
+            document.getElementById('video2').addEventListener('ended', function(e) {
+                if(l1 < (links1.length -1)){
+                    l1 = l1+1;
+                }else{
+                    window.alert("A lista de videos da câmera 2 chegou ao fim!")
+                }
+                $('#video2 source').attr("src","http://189.80.11.182:8082/vr/record/{{ c2 }}/"+ $(date).val() +"/MP4/"+ links2[l2]);
+                $('#video2').load();
+            });
+
+            document.getElementById('video3').addEventListener('ended', function(e) {
+                if(l1 < (links1.length -1)){
+                    l1 = l1+1;
+                }else{
+                    window.alert("A lista de videos da câmera 3 chegou ao fim!")
+                }
+                $('#video3 source').attr("src","http://189.80.11.182:8082/vr/record/{{ c3 }}/"+ $(date).val() +"/MP4/"+ links3[l3]);
+                $('#video3').load();
+            });
+
+            document.getElementById('video4').addEventListener('ended', function(e) {
+                if(l1 < (links1.length -1)){
+                    l1 = l1+1;
+                }else{
+                    window.alert("A lista de videos da câmera 4 chegou ao fim!")
+                }
+                $('#video4 source').attr("src","http://189.80.11.182:8082/vr/record/{{ c4 }}/"+ $(date).val() +"/MP4/"+ links4[l4]);
+                $('#video4').load();
+            });
+
+
+
+
+        });
+    </script>
+{% endblock %}

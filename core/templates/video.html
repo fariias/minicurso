@@ -1,0 +1,308 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{% static "css/simple-sidebar.css" %}" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+          <form class="" method="post"> {% csrf_token %}
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Video
+                    </a>
+                </li>
+
+                <li>
+
+                  <select class="form-control" name='link1'>
+                              <option value='01'>Av. Pres. Epitacio Pessoa X Av. Sen. Ruy Carneiro</option>
+                              <option value='02'>Parque Solon de Lucena</option>
+                              <option value='03'>Via Expressa Padre Ze</option>
+                              <option value='04'>Av. Min. Jose Americo de Almeida x Av. Barao de Ma</option>
+                              <option value='05'>Av. Pres. Epitacio Pessoa (Busto de Tamandare)</option>
+                              <option value='06'>Av. Pres. Getulio Vargas x Av. dos Tabajaras</option>
+                              <option value='07'>Av. Pres. Epitacio Pessoa x Av. Maranhao</option>
+                              <option value='08'>Av. Pres. Epitacio Pessoa x R. Prefeito Jose Leite</option>
+                              <option value='09'>Av. Flavio Ribeiro Coutinho x Av. Gal. Edson Ramal</option>
+                              <option value='10'>Av. General Osorio x Av. Guedes Pereira</option>
+                              <option value='11'>R. Emp. Joao Rodrigues Alves x R. Jose Alexandre d</option>
+                              <option value='12'>Av. Pres. Epitacio Pessoa x R. Paulino Pinto</option>
+                              <option value='13'>Parque Solon de Lucena x Pe. Meira</option>
+                              <option value='14'>Av. Min. Jose A. de Almeida (Rotatoria do Altipla</option>
+                              <option value='15'>Av. Pres. Epitacio Pessoa x Rua das Acacias</option>
+                              <option value='16'>Av. Sen. Ruy Carneiro x Av. Almirante Tamandare</option>
+                              <option value='17'>Av. Sen. Ruy Carneiro x Av. Maria Rosa</option>
+                              <option value='18'>R. Santo Elias x Parque Solon de Lucena</option>
+                              <option value='19'>R. Banc. Sergio Guerra x R. Rosa Lima dos Santos</option>
+                              <option value='20'>R. Francisco Londres (Terminal de Integracao)</option>
+                              <option value='21'>Viadulto Cristo Redentor</option>
+                              <option value='22'>Av. Pres. Epitacio Pessoa x Av. Gal. Bento da Gama</option>
+                              <option value='23'>Praca Joao Pessoa x Praca 1817</option>
+                              <option value='24'>Av. Duarte da Silveira X Av. Maximiano de Figueire</option>
+                              <option value='25'>Av. Joao Machado x R. Americo Falcao</option>
+                              <option value='26'>Av. Cruz das Armas (Feira de Oitizeiro)</option>
+                              <option value='27'>Av. Cruz das Armas (Mercado Publico)</option>
+                              <option value='28'>Av. Gov. Flavio Ribeiro Coutinho x R. Manoel Arruda</option>
+                              <option value='29'>Av Min. Jose Americo de Almeida x Av. Rui Barbosa</option>
+                              <option value='30'>Av. Cabo Branco X R. Tab. Antonio Carneiro</option>
+                              <option value='31'>Av. Josefa Taveira com R. Elias Pereira de Araujo</option>
+                              <option value='32'>Av Pres. Epitacio Pessoa X Av Amazonas</option>
+                              <option value='33'>Av Pres. Epitacio Pessoa x Av. Tito Silva</option>
+                              <option value='34'>Av. Pedro II x Av Ruy Barbosa</option>
+                              <option value='35'>Av. Boto de Menezes x Av. Berreto Sobrinho</option>
+                              <option value='36'>Av. Pres. Epitacio Pessoa X Av. Maria Caetano Fern</option>
+                              <option value='37'>Av. Pres. Tancredo Neves</option>
+                              <option value='38'>Av. Ministro Jose Americo de Almeida (Viaduto Tito</option>
+                              <option value='39'>PB-008Av. Josefa Taveira com R. Elias Pereira de Araujo</option>
+                              <option value='40'>Av.Pedro II ( IBAMA )</option>
+                              <option value='41'>R. Bel. Jose de O. Curchatuz (Rotatória do Bessa)</option>
+                              <option value='42'>R. Maciel Pinheiro x Av. Barao do Triunfo</option>
+                              <option value='43'>Av. Hilton Souto Maior (Viaduto Mangabeira)</option>
+                      </select>
+                </li>
+                <br/>
+                <li>
+                  <select class="form-control" name='link2'>
+                              <option value='01'>Av. Pres. Epitacio Pessoa X Av. Sen. Ruy Carneiro</option>
+                              <option value='02'>Parque Solon de Lucena</option>
+                              <option value='03'>Via Expressa Padre Ze</option>
+                              <option value='04'>Av. Min. Jose Americo de Almeida x Av. Barao de Ma</option>
+                              <option value='05'>Av. Pres. Epitacio Pessoa (Busto de Tamandare)</option>
+                              <option value='06'>Av. Pres. Getulio Vargas x Av. dos Tabajaras</option>
+                              <option value='07'>Av. Pres. Epitacio Pessoa x Av. Maranhao</option>
+                              <option value='08'>Av. Pres. Epitacio Pessoa x R. Prefeito Jose Leite</option>
+                              <option value='09'>Av. Flavio Ribeiro Coutinho x Av. Gal. Edson Ramal</option>
+                              <option value='10'>Av. General Osorio x Av. Guedes Pereira</option>
+                              <option value='11'>R. Emp. Joao Rodrigues Alves x R. Jose Alexandre d</option>
+                              <option value='12'>Av. Pres. Epitacio Pessoa x R. Paulino Pinto</option>
+                              <option value='13'>Parque Solon de Lucena x Pe. Meira</option>
+                              <option value='14'>Av. Min. Jose A. de Almeida (Rotatoria do Altipla</option>
+                              <option value='15'>Av. Pres. Epitacio Pessoa x Rua das Acacias</option>
+                              <option value='16'>Av. Sen. Ruy Carneiro x Av. Almirante Tamandare</option>
+                              <option value='17'>Av. Sen. Ruy Carneiro x Av. Maria Rosa</option>
+                              <option value='18'>R. Santo Elias x Parque Solon de Lucena</option>
+                              <option value='19'>R. Banc. Sergio Guerra x R. Rosa Lima dos Santos</option>
+                              <option value='20'>R. Francisco Londres (Terminal de Integracao)</option>
+                              <option value='21'>Viadulto Cristo Redentor</option>
+                              <option value='22'>Av. Pres. Epitacio Pessoa x Av. Gal. Bento da Gama</option>
+                              <option value='23'>Praca Joao Pessoa x Praca 1817</option>
+                              <option value='24'>Av. Duarte da Silveira X Av. Maximiano de Figueire</option>
+                              <option value='25'>Av. Joao Machado x R. Americo Falcao</option>
+                              <option value='26'>Av. Cruz das Armas (Feira de Oitizeiro)</option>
+                              <option value='27'>Av. Cruz das Armas (Mercado Publico)</option>
+                              <option value='28'>Av. Gov. Flavio Ribeiro Coutinho x R. Manoel Arruda</option>
+                              <option value='29'>Av Min. Jose Americo de Almeida x Av. Rui Barbosa</option>
+                              <option value='30'>Av. Cabo Branco X R. Tab. Antonio Carneiro</option>
+                              <option value='31'>Av. Josefa Taveira com R. Elias Pereira de Araujo</option>
+                              <option value='32'>Av Pres. Epitacio Pessoa X Av Amazonas</option>
+                              <option value='33'>Av Pres. Epitacio Pessoa x Av. Tito Silva</option>
+                              <option value='34'>Av. Pedro II x Av Ruy Barbosa</option>
+                              <option value='35'>Av. Boto de Menezes x Av. Berreto Sobrinho</option>
+                              <option value='36'>Av. Pres. Epitacio Pessoa X Av. Maria Caetano Fern</option>
+                              <option value='37'>Av. Pres. Tancredo Neves</option>
+                              <option value='38'>Av. Ministro Jose Americo de Almeida (Viaduto Tito</option>
+                              <option value='39'>PB-008Av. Josefa Taveira com R. Elias Pereira de Araujo</option>
+                              <option value='40'>Av.Pedro II ( IBAMA )</option>
+                              <option value='41'>R. Bel. Jose de O. Curchatuz (Rotatória do Bessa)</option>
+                              <option value='42'>R. Maciel Pinheiro x Av. Barao do Triunfo</option>
+                              <option value='43'>Av. Hilton Souto Maior (Viaduto Mangabeira)</option>
+                      </select>
+                </li>
+                <br/>
+                <li>
+                  <select class="form-control" name='link3'>
+                              <option value='01'>Av. Pres. Epitacio Pessoa X Av. Sen. Ruy Carneiro</option>
+                              <option value='02'>Parque Solon de Lucena</option>
+                              <option value='03'>Via Expressa Padre Ze</option>
+                              <option value='04'>Av. Min. Jose Americo de Almeida x Av. Barao de Ma</option>
+                              <option value='05'>Av. Pres. Epitacio Pessoa (Busto de Tamandare)</option>
+                              <option value='06'>Av. Pres. Getulio Vargas x Av. dos Tabajaras</option>
+                              <option value='07'>Av. Pres. Epitacio Pessoa x Av. Maranhao</option>
+                              <option value='08'>Av. Pres. Epitacio Pessoa x R. Prefeito Jose Leite</option>
+                              <option value='09'>Av. Flavio Ribeiro Coutinho x Av. Gal. Edson Ramal</option>
+                              <option value='10'>Av. General Osorio x Av. Guedes Pereira</option>
+                              <option value='11'>R. Emp. Joao Rodrigues Alves x R. Jose Alexandre d</option>
+                              <option value='12'>Av. Pres. Epitacio Pessoa x R. Paulino Pinto</option>
+                              <option value='13'>Parque Solon de Lucena x Pe. Meira</option>
+                              <option value='14'>Av. Min. Jose A. de Almeida (Rotatoria do Altipla</option>
+                              <option value='15'>Av. Pres. Epitacio Pessoa x Rua das Acacias</option>
+                              <option value='16'>Av. Sen. Ruy Carneiro x Av. Almirante Tamandare</option>
+                              <option value='17'>Av. Sen. Ruy Carneiro x Av. Maria Rosa</option>
+                              <option value='18'>R. Santo Elias x Parque Solon de Lucena</option>
+                              <option value='19'>R. Banc. Sergio Guerra x R. Rosa Lima dos Santos</option>
+                              <option value='20'>R. Francisco Londres (Terminal de Integracao)</option>
+                              <option value='21'>Viadulto Cristo Redentor</option>
+                              <option value='22'>Av. Pres. Epitacio Pessoa x Av. Gal. Bento da Gama</option>
+                              <option value='23'>Praca Joao Pessoa x Praca 1817</option>
+                              <option value='24'>Av. Duarte da Silveira X Av. Maximiano de Figueire</option>
+                              <option value='25'>Av. Joao Machado x R. Americo Falcao</option>
+                              <option value='26'>Av. Cruz das Armas (Feira de Oitizeiro)</option>
+                              <option value='27'>Av. Cruz das Armas (Mercado Publico)</option>
+                              <option value='28'>Av. Gov. Flavio Ribeiro Coutinho x R. Manoel Arruda</option>
+                              <option value='29'>Av Min. Jose Americo de Almeida x Av. Rui Barbosa</option>
+                              <option value='30'>Av. Cabo Branco X R. Tab. Antonio Carneiro</option>
+                              <option value='31'>Av. Josefa Taveira com R. Elias Pereira de Araujo</option>
+                              <option value='32'>Av Pres. Epitacio Pessoa X Av Amazonas</option>
+                              <option value='33'>Av Pres. Epitacio Pessoa x Av. Tito Silva</option>
+                              <option value='34'>Av. Pedro II x Av Ruy Barbosa</option>
+                              <option value='35'>Av. Boto de Menezes x Av. Berreto Sobrinho</option>
+                              <option value='36'>Av. Pres. Epitacio Pessoa X Av. Maria Caetano Fern</option>
+                              <option value='37'>Av. Pres. Tancredo Neves</option>
+                              <option value='38'>Av. Ministro Jose Americo de Almeida (Viaduto Tito</option>
+                              <option value='39'>PB-008Av. Josefa Taveira com R. Elias Pereira de Araujo</option>
+                              <option value='40'>Av.Pedro II ( IBAMA )</option>
+                              <option value='41'>R. Bel. Jose de O. Curchatuz (Rotatória do Bessa)</option>
+                              <option value='42'>R. Maciel Pinheiro x Av. Barao do Triunfo</option>
+                              <option value='43'>Av. Hilton Souto Maior (Viaduto Mangabeira)</option>
+                      </select>
+                </li>
+                <br/>
+                <li>
+                  <select class="form-control" name='link4'>
+                              <option value='01'>Av. Pres. Epitacio Pessoa X Av. Sen. Ruy Carneiro</option>
+                              <option value='02'>Parque Solon de Lucena</option>
+                              <option value='03'>Via Expressa Padre Ze</option>
+                              <option value='04'>Av. Min. Jose Americo de Almeida x Av. Barao de Ma</option>
+                              <option value='05'>Av. Pres. Epitacio Pessoa (Busto de Tamandare)</option>
+                              <option value='06'>Av. Pres. Getulio Vargas x Av. dos Tabajaras</option>
+                              <option value='07'>Av. Pres. Epitacio Pessoa x Av. Maranhao</option>
+                              <option value='08'>Av. Pres. Epitacio Pessoa x R. Prefeito Jose Leite</option>
+                              <option value='09'>Av. Flavio Ribeiro Coutinho x Av. Gal. Edson Ramal</option>
+                              <option value='10'>Av. General Osorio x Av. Guedes Pereira</option>
+                              <option value='11'>R. Emp. Joao Rodrigues Alves x R. Jose Alexandre d</option>
+                              <option value='12'>Av. Pres. Epitacio Pessoa x R. Paulino Pinto</option>
+                              <option value='13'>Parque Solon de Lucena x Pe. Meira</option>
+                              <option value='14'>Av. Min. Jose A. de Almeida (Rotatoria do Altipla</option>
+                              <option value='15'>Av. Pres. Epitacio Pessoa x Rua das Acacias</option>
+                              <option value='16'>Av. Sen. Ruy Carneiro x Av. Almirante Tamandare</option>
+                              <option value='17'>Av. Sen. Ruy Carneiro x Av. Maria Rosa</option>
+                              <option value='18'>R. Santo Elias x Parque Solon de Lucena</option>
+                              <option value='19'>R. Banc. Sergio Guerra x R. Rosa Lima dos Santos</option>
+                              <option value='20'>R. Francisco Londres (Terminal de Integracao)</option>
+                              <option value='21'>Viadulto Cristo Redentor</option>
+                              <option value='22'>Av. Pres. Epitacio Pessoa x Av. Gal. Bento da Gama</option>
+                              <option value='23'>Praca Joao Pessoa x Praca 1817</option>
+                              <option value='24'>Av. Duarte da Silveira X Av. Maximiano de Figueire</option>
+                              <option value='25'>Av. Joao Machado x R. Americo Falcao</option>
+                              <option value='26'>Av. Cruz das Armas (Feira de Oitizeiro)</option>
+                              <option value='27'>Av. Cruz das Armas (Mercado Publico)</option>
+                              <option value='28'>Av. Gov. Flavio Ribeiro Coutinho x R. Manoel Arruda</option>
+                              <option value='29'>Av Min. Jose Americo de Almeida x Av. Rui Barbosa</option>
+                              <option value='30'>Av. Cabo Branco X R. Tab. Antonio Carneiro</option>
+                              <option value='31'>Av. Josefa Taveira com R. Elias Pereira de Araujo</option>
+                              <option value='32'>Av Pres. Epitacio Pessoa X Av Amazonas</option>
+                              <option value='33'>Av Pres. Epitacio Pessoa x Av. Tito Silva</option>
+                              <option value='34'>Av. Pedro II x Av Ruy Barbosa</option>
+                              <option value='35'>Av. Boto de Menezes x Av. Berreto Sobrinho</option>
+                              <option value='36'>Av. Pres. Epitacio Pessoa X Av. Maria Caetano Fern</option>
+                              <option value='37'>Av. Pres. Tancredo Neves</option>
+                              <option value='38'>Av. Ministro Jose Americo de Almeida (Viaduto Tito</option>
+                              <option value='39'>PB-008Av. Josefa Taveira com R. Elias Pereira de Araujo</option>
+                              <option value='40'>Av.Pedro II ( IBAMA )</option>
+                              <option value='41'>R. Bel. Jose de O. Curchatuz (Rotatória do Bessa)</option>
+                              <option value='42'>R. Maciel Pinheiro x Av. Barao do Triunfo</option>
+                              <option value='43'>Av. Hilton Souto Maior (Viaduto Mangabeira)</option>
+                      </select>
+                </li>
+
+                <li>
+                    <button type="submit" class="btn btn-default">Abrir</button>
+                </li>
+            </ul>
+          </form>
+
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+
+        <div id="page-content-wrapper">
+          <table border="3" width="100%" height="100%" cellspacing="0" cellpadding="0">
+          <tr>
+
+          <td colspan="3" width="50%" height="50%" style="background-color:black">
+            <video autoplay reload class="video1" width="100%" height="100%">
+            Camera 1
+            <source src="{{ dct.c1 }}" type="video/mp4">
+            </video>
+          </td>
+
+          <td colspan="3" width="50%" height="50%" style="background-color:black">
+            <video autoplay reload class="video2" width="100%" height="100%">
+            Camera 1
+            <source src="{{ dct.c2 }}" type="video/mp4">
+            </video>
+          </td>
+
+          <tr>
+
+            <td colspan="3" width="50%" height="50%" style="background-color:black">
+              <video autoplay reload class="video3" width="100%" height="100%">
+              Camera 1
+              <source src="{{ dct.c3 }}" type="video/mp4">
+              </video>
+            </td>
+
+            <td colspan="3" width="50%" height="50%" style="background-color:black">
+              <video autoplay reload class="video4" width="100%" height="100%">
+              Camera 1
+              <source src="{{ dct.c4 }}" type="video/mp4">
+              </video>
+            </td>
+
+          </tr>
+          </table>
+
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+
+    <!-- jQuery -->
+    <script src=" {% static "js/jquery.js" %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

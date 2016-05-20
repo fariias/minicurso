@@ -1,0 +1,61 @@
+{% extends 'screen/base.html' %}
+
+
+{% block screens %}
+    <table id="tbVideo" border="5" width="100%" height="100%" cellspacing="0" cellpadding="0" style="text-align:center;table-layout: fixed;">
+        <tr>
+
+            <td colspan="12" width="50%" height="50%" style="background-color:black">
+            <div id="c1Text" class="c1Text"></div>
+                <video id="video1" autoplay reload class="video1"  height="100%" style="padding:2px; margin-top: 4px;">
+                    Camera 1
+                    <ul id="links1">
+                        {% for l in links1 %}
+                            <li>{{ l }}</li>
+                        {% endfor %}
+
+                    </ul>
+                    <source src=" " type="video/mp4">
+                </video>
+            </td>
+        </tr>
+
+
+    </table>
+
+    <script type='text/javascript'>
+
+        var links1 = [];
+
+        var l1 = 0;
+
+
+
+
+        $(function () {
+            $("#links1 > li").each( function(index) {
+                links1.push($(this).html())
+            });
+
+            $('#video1 source').attr("src","http://189.80.11.182:8082/vr/record/{{ c1 }}/"+ $(date).val() +"/MP4/"+ links1[l1]);
+            $('#video1').load();
+            setLegenda();
+
+            document.getElementById('video1').addEventListener('ended', function(e) {
+                if(l1 < (links1.length -1)){
+                    l1 = l1+1;
+                }
+                $('#video1 source').attr("src","http://189.80.11.182:8082/vr/record/{{ c1 }}/"+ $(date).val() +"/MP4/"+ links1[l1]);
+                $('#video1').load();
+                setLegenda();
+            });
+
+        function setLegenda() {
+                $('#c1Text').html('<b>' + $('#link1 option:selected').text().slice(3) + '</b>');
+                $('#c1Text').html($('#c1Text').html() + '<p><b style="text-align:center">' + $(date).val() + " " + links1[l1].slice(6, 8) + ":" + links1[l1].slice(8, 10) + '</b>');
+
+            }
+
+        });
+    </script>
+{% endblock %}
