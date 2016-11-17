@@ -1,6 +1,8 @@
+# -*- coding: utf-8 -*-
 from django.shortcuts import render
 import urllib2
 from BeautifulSoup import BeautifulSoup
+from datetime import datetime
 
 
 def home(request):
@@ -9,5 +11,4 @@ def home(request):
 
 
 def captura():
-    '''Função que captura e retorna o link '''
-    return 'aqui retorne o link'
+    return 'retorne o link aqui'
